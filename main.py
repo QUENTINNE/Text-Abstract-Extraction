@@ -44,9 +44,9 @@ def output(n):
                 s = SnowNLP(sText).summary(n)  # 摘要
                 abstractList[k] = s
         dfResult = pd.DataFrame(resultList).rename(columns={0: 'Result'})
-        dfResult.to_csv('D: //users/xiaoshuwen//OUTPUT/C_JUDGEMENT_RESULT_%s0%s.csv' % (year, month), index=False)
+        dfResult.to_csv('D: //文件存放路径/结果数据/C_JUDGEMENT_RESULT_%s0%s.csv' % (year, month), index=False)
         dfAbstract = pd.DataFrame(abstractList).rename(columns={0: 'Abstract_1', 1: 'Abstract_2', 2: 'Abstract_3'})
-        dfAbstract.to_csv('D: //users/xiaoshuwen//OUTPUT/C_JUDGEMENT_RESULT_Abstract_%s0%s. csv' % (year, month),
+        dfAbstract.to_csv('D: //文件存放路径/结果数据/C_JUDGEMENT_RESULT_Abstract_%s0%s. csv' % (year, month),
                           index=False)
 
 
